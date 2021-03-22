@@ -1,0 +1,28 @@
+#Build docker file into container
+Docker build -t demoapp3 .
+
+# List images
+Docker images
+
+#Run container
+Docker run -d -p 8080:80 --name demoapp3 demoapp3:latest
+
+#List running containers
+
+Docker ps 
+
+#List All containers inc stopped
+
+Docker ps -a 
+
+#Remove container
+
+Docker rm demoapp3
+
+#Remove images
+Docker rmi [container id]
+#ECR command to tag 
+Docker tag demoapp3:latest  [ECR URL]:latest
+
+#ECR command to push to ECR
+Docker push [ecr url]:latest
